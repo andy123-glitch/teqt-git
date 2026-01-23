@@ -12,7 +12,7 @@ export default function Header() {
         />
       
       <nav>
-        <NavLink to="">Accueil</NavLink>
+        <NavLink to="/">Accueil</NavLink>
         <NavLink to="/informations">A propos</NavLink>
       </nav>
     </header>

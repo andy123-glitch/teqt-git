@@ -3,7 +3,7 @@ import imgBanner from '../assets/images/background.png';
 import Card from '../components/Card';
 import Footer from '../layout/Footer';
 
-function Home(params) {
+function Home() {
   return (
     <>
       <div className="main-content">
