@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "npx sass src/assets/styles/style.scss src/assets/styles/style-output.css -w"
   },
   "dependencies": {
     "react": "^19.2.0",
