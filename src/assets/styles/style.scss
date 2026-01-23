@@ -213,3 +213,28 @@ footer {
 
   margin: auto;
 }
+
+.profile{
+  display: flex;
+  img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(196,196,196,1);
+  }
+  h3{
+    font-weight: normal;
+  }
+}
+
+.logement{
+  .cover{
+    height:415px ;
+  }
+}
+
+.stars{
+  font-size: 1.5rem;
+}
+
+
