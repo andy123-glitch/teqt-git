@@ -1,5 +1,13 @@
 function Informations() {
-  return <h1>home</h1>;
+  return (
+    <>
+      <div className="main-container">
+        <Header />
+        <div className="banner"></div>
+        <Dropdown></Dropdown>
+      </div>
+    </>
+  );
 }
 
 export default Informations;
