@@ -163,49 +163,46 @@ footer {
 }
 
 .dropdown-btn {
-  display: grid;
-  grid-template-areas:
-    'title btn'
-    'p p';
-  grid-template-columns: 1fr 52px;
-  align-items: center;
-  font-weight: 700;
   margin-bottom: 28px;
+  .header {
+    border-radius: 5px;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   h3 {
     margin: 0;
     padding: 10px;
     font-weight: 700;
-    border-radius: 5px 0 0 5px;
-    grid-area: title;
-    background-color: $color-primary;
     color: $color-secondary;
   }
   button {
     font-weight: 700;
-
-    border-radius: 0px 5px 5px 0px;
-    height: 100%;
     border: unset;
-    grid-area: btn;
-    background-color: $color-primary;
+    background-color: unset;
     color: $color-secondary;
     font-size: large;
+    rotate: 90deg;
+    transition: rotate ease-in 0.25s;
   }
   p {
     color: black;
     grid-area: p;
-    padding: 17px;
+
     background: rgba(246, 246, 246, 0.45);
     margin: 0;
     transform: translateY(-100%);
     opacity: 0;
-    height: 0px;
+    height: 0;
     transition: all ease 0.2s;
     z-index: -1;
     &.active {
       height: auto;
       transform: translateY(0);
       opacity: 1;
+      padding: 17px;
     }
   }
 }
