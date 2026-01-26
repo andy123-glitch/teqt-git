@@ -3,6 +3,11 @@
 $color-primary: #ff6060;
 $color-secondary: #ffffff;
 $font: 'Montserrat', Arial;
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
 
 body {
   margin: 0;
@@ -15,18 +20,6 @@ a {
   color: black;
   text-decoration: none;
 }
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  nav {
-    display: flex;
-    gap: 57px;
-  }
-}
-
 .main-content {
   max-width: 1240px;
   width: 100%;
@@ -37,6 +30,26 @@ header {
   justify-items: center;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/************************Header ********************************/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    display: flex;
+    gap: 57px;
+  }
+}
+/*****************************************************/
+
+/****************************Page Home ******************************/
 .banner {
   position: relative;
   box-shadow: 0 4px 4px 0 #00000040;
@@ -61,11 +74,7 @@ header {
     text-shadow: 0px 4px 4px #00000040;
   }
 }
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
+
 .container {
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -113,6 +122,7 @@ main {
   }
 }
 
+/**************************Footer*******************************/
 footer {
   display: flex;
   flex-direction: column;
@@ -129,7 +139,7 @@ footer {
     font-size: 1.4rem;
   }
 }
-
+/************************Page Not found***************************/
 .number-NotFound {
   text-align: center;
   width: 100%;
@@ -147,6 +157,8 @@ footer {
   }
 }
 
+/*Page */
+
 .informations {
   .banner {
     img {
@@ -156,12 +168,7 @@ footer {
   }
 }
 
-#root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
+/********************Dropdown Button*********************/
 .dropdown-btn {
   margin-bottom: 28px;
   .header {
@@ -183,9 +190,10 @@ footer {
     border: unset;
     background-color: unset;
     color: $color-secondary;
-    font-size: large;
-    rotate: 90deg;
-    transition: rotate ease-in 0.25s;
+    img{
+
+      transition: rotate ease-in 0.25s;
+    }
   }
   p {
     color: black;
@@ -214,27 +222,83 @@ footer {
   margin: auto;
 }
 
-.profile{
+/*********************************Page Logement********************************/
+.profile {
   display: flex;
-  img{
+  gap: 10px;
+
+  img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: rgba(196,196,196,1);
+    background-color: rgba(196, 196, 196, 1);
   }
-  h3{
+  h3 {
+    text-align: left;
     font-weight: normal;
+    margin: 10px 0 0 0;
   }
 }
 
-.logement{
-  .cover{
-    height:415px ;
+.first-row {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+.logement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 76px;
+  .dropdown-btn {
+    align-self: self-start;
   }
 }
 
-.stars{
+.logement-page {
+  gap: 20px;
+}
+
+.cover {
+  height: 415px;
+  margin: 2rem 0 1rem;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.stars {
   font-size: 1.5rem;
+  justify-self: end;
 }
 
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  .utag {
+    font-weight: 600;
+    font-size: 0.9 rem;
+    width: 115px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    border-radius: 10px;
+  }
+}
 
+.headings {
+  h1 {
+    margin: 0;
+    font-weight: 500;
+  }
+  h2 {
+    font-weight: 400;
+    color: black;
+    font-size: 1.1rem;
+    margin: 0;
+    padding-top: 7px;
+    font-weight: 500;
+  }
+}

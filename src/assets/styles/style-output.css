@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", Arial;
@@ -11,6 +17,23 @@ a {
   text-decoration: none;
 }
 
+.main-content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 45px auto;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  justify-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/************************Header ********************************/
 header {
   display: flex;
   flex-direction: row;
@@ -22,16 +45,8 @@ header nav {
   gap: 57px;
 }
 
-.main-content {
-  max-width: 1240px;
-  width: 100%;
-  margin: 45px auto;
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
-  justify-items: center;
-}
-
+/*****************************************************/
+/****************************Page Home ******************************/
 .banner {
   position: relative;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
@@ -54,12 +69,6 @@ header nav {
   font-weight: 700;
   font-size: 3rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2509803922);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
 }
 
 .container {
@@ -99,6 +108,7 @@ main {
   margin: 0;
 }
 
+/**************************Footer*******************************/
 footer {
   display: flex;
   flex-direction: column;
@@ -116,6 +126,7 @@ footer div {
   font-size: 1.4rem;
 }
 
+/************************Page Not found***************************/
 .number-NotFound {
   text-align: center;
   width: 100%;
@@ -134,17 +145,13 @@ footer div {
   text-decoration: underline;
 }
 
+/*Page */
 .informations .banner img {
   opacity: 1;
   background-color: unset;
 }
 
-#root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
+/********************Dropdown Button*********************/
 .dropdown-btn {
   margin-bottom: 28px;
 }
@@ -166,8 +173,8 @@ footer div {
   border: unset;
   background-color: unset;
   color: #ffffff;
-  font-size: large;
-  rotate: 90deg;
+}
+.dropdown-btn button img {
   transition: rotate ease-in 0.25s;
 }
 .dropdown-btn p {
@@ -194,8 +201,10 @@ footer div {
   margin: auto;
 }
 
+/*********************************Page Logement********************************/
 .profile {
   display: flex;
+  gap: 10px;
 }
 .profile img {
   width: 64px;
@@ -204,15 +213,72 @@ footer div {
   background-color: rgb(196, 196, 196);
 }
 .profile h3 {
+  text-align: left;
   font-weight: normal;
+  margin: 10px 0 0 0;
 }
 
-.logement .cover {
+.first-row {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.logement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 76px;
+}
+.logement .dropdown-btn {
+  align-self: self-start;
+}
+
+.logement-page {
+  gap: 20px;
+}
+
+.cover {
   height: 415px;
+  margin: 2rem 0 1rem;
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 .stars {
   font-size: 1.5rem;
+  justify-self: end;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.tags .utag {
+  font-weight: 600;
+  font-size: 0.9 rem;
+  width: 115px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6060;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.headings h1 {
+  margin: 0;
+  font-weight: 500;
+}
+.headings h2 {
+  font-weight: 400;
+  color: black;
+  font-size: 1.1rem;
+  margin: 0;
+  padding-top: 7px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style-output.css.map */
