@@ -175,7 +175,7 @@ footer div {
 .dropdown-btn button img {
   transition: rotate ease-in 0.25s;
 }
-.dropdown-btn p {
+.dropdown-btn .children {
   color: black;
   font-weight: 500;
   background: rgba(246, 246, 246, 0.45);
@@ -186,7 +186,7 @@ footer div {
   transition: all ease 0.2s;
   z-index: -1;
 }
-.dropdown-btn p.active {
+.dropdown-btn .children.active {
   height: auto;
   transform: translateY(0);
   opacity: 1;
@@ -260,8 +260,8 @@ footer div {
 }
 .tags .utag {
   font-weight: 600;
-  font-size: 0.9 rem;
-  width: 115px;
+  font-size: 0.9rem;
+  min-width: 115px;
   height: 25px;
   display: flex;
   justify-content: center;
@@ -269,6 +269,7 @@ footer div {
   background-color: #ff6060;
   color: #ffffff;
   border-radius: 10px;
+  padding: 0 10px;
 }
 
 .headings h1 {

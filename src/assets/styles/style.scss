@@ -195,10 +195,10 @@ footer {
       transition: rotate ease-in 0.25s;
     }
   }
-  p {
+  .children {
     color: black;
     font-weight: 500;
-    
+
     background: rgba(246, 246, 246, 0.45);
     margin: 0;
     transform: translateY(-100%);
@@ -281,8 +281,8 @@ footer {
   gap: 10px;
   .utag {
     font-weight: 600;
-    font-size: 0.9 rem;
-    width: 115px;
+    font-size: 0.9rem;
+    min-width: 115px;
     height: 25px;
     display: flex;
     justify-content: center;
@@ -290,6 +290,7 @@ footer {
     background-color: $color-primary;
     color: $color-secondary;
     border-radius: 10px;
+    padding: 0 10px;
   }
 }
 
