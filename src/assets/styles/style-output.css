@@ -138,7 +138,6 @@ footer div {
   text-align: center;
 }
 .NotFound p {
-  font-weight: 500;
   font-size: 2.5rem;
 }
 .NotFound .return {
@@ -154,6 +153,7 @@ footer div {
 /********************Dropdown Button*********************/
 .dropdown-btn {
   margin-bottom: 28px;
+  font-weight: 700;
 }
 .dropdown-btn .header {
   border-radius: 5px;
@@ -161,17 +161,15 @@ footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 10px;
 }
 .dropdown-btn h3 {
   margin: 0;
-  padding: 10px;
-  font-weight: 700;
   color: #ffffff;
 }
 .dropdown-btn button {
-  font-weight: 700;
-  border: unset;
-  background-color: unset;
+  border: transparent;
+  background-color: transparent;
   color: #ffffff;
 }
 .dropdown-btn button img {
@@ -179,7 +177,7 @@ footer div {
 }
 .dropdown-btn p {
   color: black;
-  grid-area: p;
+  font-weight: 500;
   background: rgba(246, 246, 246, 0.45);
   margin: 0;
   transform: translateY(-100%);
@@ -204,7 +202,7 @@ footer div {
 /*********************************Page Logement********************************/
 .profile {
   display: flex;
-  gap: 10px;
+  gap: 0.6rem;
 }
 .profile img {
   width: 64px;
@@ -213,9 +211,9 @@ footer div {
   background-color: rgb(196, 196, 196);
 }
 .profile h3 {
-  text-align: left;
-  font-weight: normal;
+  text-align: right;
   margin: 10px 0 0 0;
+  font-weight: 500;
 }
 
 .first-row {
@@ -232,10 +230,12 @@ footer div {
 }
 .logement .dropdown-btn {
   align-self: self-start;
+  margin-bottom: 0;
 }
 
 .logement-page {
   gap: 20px;
+  margin-bottom: 50px;
 }
 
 .cover {
@@ -246,8 +246,11 @@ footer div {
 }
 
 .stars {
-  font-size: 1.5rem;
   justify-self: end;
+}
+.stars img {
+  height: 24px;
+  padding: 0 0.2rem;
 }
 
 .tags {
@@ -273,7 +276,6 @@ footer div {
   font-weight: 500;
 }
 .headings h2 {
-  font-weight: 400;
   color: black;
   font-size: 1.1rem;
   margin: 0;
