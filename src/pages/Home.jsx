@@ -2,6 +2,7 @@ import Header from '../layout/Header';
 import imgBanner from '../assets/images/background.png';
 import Card from '../components/Card';
 import Footer from '../layout/Footer';
+import datas from '../../data/data.json';
 
 function Home() {
   return (
@@ -18,12 +19,14 @@ function Home() {
             <span>Chez vous, partout et ailleurs</span>
           </section>
           <section className="container">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {datas.map(({ id, cover, title }) => (
+              <Card
+                to={id}
+                cover={cover}
+                title={title}
+                key={`${id}-${title}`}
+              />
+            ))}
           </section>
         </main>
       </div>

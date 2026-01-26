@@ -12,8 +12,8 @@ export default function Stars({ number }) {
 
   return (
     <div className="stars">
-      {stars.map(s => (
-        <img src={s} alt="" />
+      {stars.map((s,index) => (
+        <img src={s} alt="" key={`${s}-${index}`} />
       ))}
     </div>
   );
