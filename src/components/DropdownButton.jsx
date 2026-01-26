@@ -17,7 +17,7 @@ export default function DropdownButton({ title, children }) {
           <img src={arrow} alt="" />
         </button>
       </div>
-      <p ref={pRef}>{children}</p>
+      <div className='children' ref={pRef}>{children}</div>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 
-export default function Card() {
+export default function Card({ to, cover, title }) {
   return (
     <article>
-      <NavLink to="/logement/1">
-        <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" />
-        <h2>Titre de l'announece</h2>
+      <NavLink to={"/logement/"+to}>
+        <img src={cover} />
+        <h2>{title}</h2>
       </NavLink>
     </article>
   );
