@@ -7,41 +7,44 @@ import Header from '../layout/Header';
 function Logement(params) {
   return (
     <>
-      <div className="main-content">
+      <div className="main-content logement-page">
         <Header />
-        <main className="logement">
-          <img className='cover' src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg" />
-          <section className="info">
-            <h1>Lorem, ipsum dolor.</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <Profile
-              name={'Della Case'}
-              picture={
-                'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg'
-              }
-            />
+        <img
+          className="cover"
+          src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"
+        />
+        <div className="first-row">
+          <section className="headings">
+            <h1>Cozy loft on the Canal Saint-Martin</h1>
+            <h2>Paris, Île-de-France</h2>
           </section>
-          <section className="tags-star">
-            <div className="tags">
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum illum dolor aperiam cupiditate delectus nobis, enim molestiae, ratione saepe architecto in, pariatur recusandae a sit natus odit explicabo harum!</span>
-            </div>
-            <Stars number={3} />
-          </section>
-          <div className="drop-btns">
-            <DropdownButton title="Description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias et
-              reiciendis, corrupti possimus assumenda ratione dignissimos odio
-              obcaecati deserunt perferendis id tempore? Assumenda explicabo id
-              doloribus totam illo aliquid veniam.
-            </DropdownButton>
-            <DropdownButton title="Équipements">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias et
-              reiciendis, corrupti possimus assumenda ratione dignissimos odio
-              obcaecati deserunt perferendis id tempore? Assumenda explicabo id
-              doloribus totam illo aliquid veniam.
-            </DropdownButton>
+          <Profile
+            name={'Della Case'}
+            picture={
+              'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg'
+            }
+          />
+        </div>
+        <div className="logement">
+          <div className="tags">
+            <div className="utag">cozy</div>
+            <div className="utag">Canal</div>
+            <div className="utag">Paris 10</div>
           </div>
-        </main>
+          <Stars number={3} />
+          <DropdownButton title="Description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias et
+            reiciendis, corrupti possimus assumenda ratione dignissimos odio
+            obcaecati deserunt perferendis id tempore? Assumenda explicabo id
+            doloribus totam illo aliquid veniam.
+          </DropdownButton>
+          <DropdownButton title="Équipements">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias et
+            reiciendis, corrupti possimus assumenda ratione dignissimos odio
+            obcaecati deserunt perferendis id tempore? Assumenda explicabo id
+            doloribus totam illo aliquid veniam.
+          </DropdownButton>
+        </div>
       </div>
       <Footer />
     </>
