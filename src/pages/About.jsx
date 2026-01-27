@@ -4,7 +4,7 @@ import Header from '../layout/Header';
 import imgBanner from '../assets/images/background2.png';
 import DropdownButton from '../components/DropdownButton';
 
-function Informations() {
+function About() {
   return (
     <>
       <div className="main-content informations">
@@ -48,4 +48,4 @@ function Informations() {
   );
 }
 
-export default Informations;
+export default About;
