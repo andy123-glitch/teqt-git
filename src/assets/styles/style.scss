@@ -261,11 +261,32 @@ footer {
   margin-bottom: 50px;
 }
 
-.cover {
-  height: 415px;
+.carousel {
+  position: relative;
   margin: 2rem 0 1rem;
   border-radius: 25px;
-  object-fit: cover;
+  .img {
+    display: flex;
+    gap: 0.5rem;
+    transform: translateX();
+    transition: transform 1s ease;
+    img {
+      height: 415px;
+      aspect-ratio: 3 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .arrows {
+    position: absolute;
+    top: 40%;
+    &.left {
+      left: 1rem;
+    }
+    &.right {
+      right: 1rem;
+    }
+  }
 }
 .stars {
   justify-self: end;

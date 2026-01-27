@@ -1,0 +1,35 @@
+import { useEffect, useRef, useState } from 'react';
+import arrowLeft from '../assets/images/arrow-left.svg';
+import arrowRight from '../assets/images/arrow-right.svg';
+
+export default function Carousel({ pictures }) {
+  const [img, setImg] = useState(0);
+  const iRef = useRef();
+
+  useEffect(() => {
+    iRef.current.style = 'transform: translateX(-' + img * 100 + '%)';
+  }, [img]);
+
+  console.log(img);
+  return (
+    <div className="carousel">
+      <div ref={iRef} className="img">
+        {pictures.map((picture, index) => (
+          <img src={picture} key={`${index}`} />
+        ))}
+      </div>
+      <div
+        className="arrows left"
+        onClick={() => setImg(img - 1 < 0 ? pictures.length-1 : img - 1)}
+      >
+        <img src={arrowRight} alt="" />
+      </div>
+      <div
+        className="arrows right"
+        onClick={() => setImg(img + 1 > pictures.length-1 ? 0 : img + 1)}
+      >
+        <img src={arrowLeft} alt="" />
+      </div>
+    </div>
+  );
+}
