@@ -7,7 +7,8 @@ export default function Carousel({ pictures }) {
   const iRef = useRef();
 
   useEffect(() => {
-    iRef.current.style = 'transform: translateX(-' + img * 100 + '%)';
+    iRef.current.style =
+      'transform: translateX(calc(-' + img * 100 + '% + -1rem))';
   }, [img]);
 
   console.log(img);
@@ -20,16 +21,19 @@ export default function Carousel({ pictures }) {
       </div>
       <div
         className="arrows left"
-        onClick={() => setImg(img - 1 < 0 ? pictures.length-1 : img - 1)}
+        onClick={() => setImg(img - 1 < 0 ? pictures.length - 1 : img - 1)}
       >
         <img src={arrowRight} alt="" />
       </div>
       <div
         className="arrows right"
-        onClick={() => setImg(img + 1 > pictures.length-1 ? 0 : img + 1)}
+        onClick={() => setImg(img + 1 > pictures.length - 1 ? 0 : img + 1)}
       >
         <img src={arrowLeft} alt="" />
       </div>
+      <span>
+        {img + 1} / {pictures.length}
+      </span>
     </div>
   );
 }
