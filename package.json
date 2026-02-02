@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "reorganize": "node reorganize-components.js"
+    "reorganize": "echo (remove between parenthese and echo  to active the command) node reorganize-components.js"
   },
   "dependencies": {
     "react": "^19.2.0",

@@ -1,5 +1,5 @@
 import Header from '@layouts/Header';
-import imgBanner from '@assets/images/background.png';
+//import imgBanner from '@assets/images/background.png';
 import Card from '@components/Card';
 import Footer from '@layouts/Footer';
 import datas from '../../../data/data.json';
@@ -12,11 +12,6 @@ function Home() {
         <Header />
         <main>
           <section className="banner">
-            <img
-              src={imgBanner}
-              alt="Photo d'un paysage avec des montagnes"
-              height={223} /*width={1240}*/
-            />
             <span>Chez vous, partout et ailleurs</span>
           </section>
           <section className="container">
