@@ -1,8 +1,9 @@
-import Header from '../layout/Header';
-import imgBanner from '../assets/images/background.png';
-import Card from '../components/Card';
-import Footer from '../layout/Footer';
-import datas from '../../data/data.json';
+import Header from '@layouts/Header';
+import imgBanner from '@assets/images/background.png';
+import Card from '@components/Card';
+import Footer from '@layouts/Footer';
+import datas from '../../../data/data.json';
+import './style.scss';
 
 function Home() {
   return (

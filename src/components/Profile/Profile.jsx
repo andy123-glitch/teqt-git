@@ -1,3 +1,5 @@
+import './style.scss';
+
 export default function Profile({ picture, name }) {
   return (
     <div className="profile">

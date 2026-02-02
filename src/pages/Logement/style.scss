@@ -1,0 +1,109 @@
+/*********************************Page Logement********************************/
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+
+.profile {
+  display: flex;
+  gap: 0.6rem;
+
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 1);
+  }
+  h3 {
+    text-align: right;
+    margin: 10px 0 0 0;
+    font-weight: 500;
+  }
+}
+
+.first-row {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+.logement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 76px;
+  .dropdown-btn {
+    align-self: self-start;
+    margin-bottom: 0;
+  }
+}
+
+.logement-page {
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.carousel {
+  position: relative;
+  margin: 2rem 0 1rem;
+  border-radius: 25px;
+  .img {
+    display: flex;
+    gap: 0.5rem;
+    transform: translateX();
+    transition: transform 1s ease;
+    img {
+      height: 415px;
+      aspect-ratio: 3 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .arrows {
+    position: absolute;
+    top: 40%;
+    &.left {
+      left: 1rem;
+    }
+    &.right {
+      right: 1rem;
+    }
+  }
+}
+.stars {
+  justify-self: end;
+  img {
+    height: 24px;
+    padding: 0 0.2rem;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  .utag {
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 115px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+}
+
+.headings {
+  h1 {
+    margin: 0;
+    font-weight: 500;
+  }
+  h2 {
+    color: black;
+    font-size: 1.1rem;
+    margin: 0;
+    padding-top: 7px;
+    font-weight: 500;
+  }
+}

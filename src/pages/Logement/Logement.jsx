@@ -1,12 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import DropdownButton from '../components/DropdownButton';
-import Profile from '../components/Profile';
-import Stars from '../components/Stars';
-import Footer from '../layout/Footer';
-import Header from '../layout/Header';
-import datas from '../../data/data.json';
-import Carousel from '../components/Carousel';
+import DropdownButton from '@components/DropdownButton';
+import Profile from '@components/Profile';
+import Stars from '@components/Stars';
+import Footer from '@layouts/Footer';
+import Header from '@layouts/Header';
+import datas from '../../../data/data.json';
+import Carousel from '@components/Carousel';
 import { useEffect } from 'react';
+import './style.scss';
 
 function Logement() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ function Logement() {
     }
   }, [nav, find]);
 
-  if (find === null) return null
+  if (find === null) return null;
   const {
     title,
     host,

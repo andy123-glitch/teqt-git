@@ -1,0 +1,56 @@
+/********************Dropdown Button*********************/
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+
+.dropdown-btn {
+  margin-bottom: 28px;
+  font-weight: 700;
+
+  .header {
+    border-radius: 5px;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  h3 {
+    margin: 0;
+    color: $color-secondary;
+  }
+
+  button {
+    border: transparent;
+    background-color: transparent;
+    color: $color-secondary;
+    img {
+      transition: rotate ease-in 0.25s;
+    }
+  }
+  .children {
+    color: black;
+    font-weight: 500;
+
+    background: rgba(246, 246, 246, 0.45);
+    margin: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    height: 0;
+    transition: all ease 0.2s;
+    z-index: -1;
+    &.active {
+      height: auto;
+      transform: translateY(0);
+      opacity: 1;
+      padding: 17px;
+    }
+  }
+}
+
+.dropdown-button-contain {
+  max-width: 1023px;
+  width: 100%;
+
+  margin: auto;
+}

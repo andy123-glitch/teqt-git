@@ -1,5 +1,6 @@
 import { useRef } from 'react';
-import arrow from '../assets/images/arrow.svg';
+import arrow from '@assets/images/arrow.svg';
+import './style.scss';
 
 export default function DropdownButton({ title, children }) {
   const pRef = useRef(null);
@@ -17,7 +18,9 @@ export default function DropdownButton({ title, children }) {
           <img src={arrow} alt="" />
         </button>
       </div>
-      <div className='children' ref={pRef}>{children}</div>
+      <div className="children" ref={pRef}>
+        {children}
+      </div>
     </div>
   );
 }

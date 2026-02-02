@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import './assets/styles/style.scss';
+import '@assets/styles/style.scss';
 
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';

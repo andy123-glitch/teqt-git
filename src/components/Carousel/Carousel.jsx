@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import arrowLeft from '../assets/images/arrow-left.svg';
-import arrowRight from '../assets/images/arrow-right.svg';
+import arrowLeft from '@assets/images/arrow-left.svg';
+import './style.scss';
+import arrowRight from '@assets/images/arrow-right.svg';
 
 export default function Carousel({ pictures }) {
   const [img, setImg] = useState(0);

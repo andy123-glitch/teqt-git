@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sass": "npx sass src/assets/styles/style.scss src/assets/styles/style-output.css -w"
+    "reorganize": "node reorganize-components.js"
   },
   "dependencies": {
     "react": "^19.2.0",

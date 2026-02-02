@@ -1,0 +1,19 @@
+/**************************Footer*******************************/
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  color: $color-secondary;
+  background-color: black;
+  padding: 30px;
+  img {
+    margin-top: 20px;
+    width: 122px;
+  }
+  div {
+    font-size: 1.4rem;
+  }
+}
