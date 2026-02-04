@@ -13,6 +13,7 @@ function Home() {
         <main>
           <section className="banner-home">
             <span>Chez vous, partout et ailleurs</span>
+            <div className="sombre"></div>
           </section>
           <section className="container">
             {datas.map(({ id, cover, title }) => (
