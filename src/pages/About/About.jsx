@@ -2,20 +2,14 @@ import Footer from '@layouts/Footer';
 import Header from '@layouts/Header';
 import './style.scss';
 
-import imgBanner from '@assets/images/background2.png';
 import DropdownButton from '@components/DropdownButton';
 
 function About() {
   return (
     <>
-      <div className="main-content informations">
+      <div className="main-content about">
         <Header />
-        <section className="banner">
-          <img
-            src={imgBanner}
-            alt="Photo d'un paysage avec des montagnes"
-            height={223} /*width={1240}*/
-          />
+        <section className="banner-about">
         </section>
         <section className="dropdown-button-contain">
           <DropdownButton title="Fiabilité">

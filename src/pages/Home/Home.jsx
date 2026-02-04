@@ -11,7 +11,7 @@ function Home() {
       <div className="main-content">
         <Header />
         <main>
-          <section className="banner">
+          <section className="banner-home">
             <span>Chez vous, partout et ailleurs</span>
           </section>
           <section className="container">

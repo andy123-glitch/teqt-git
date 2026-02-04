@@ -1,10 +1,18 @@
-
-.informations {
-  .banner {
-    img {
-      opacity: 1;
-      background-color: unset;
+.about {
+  .banner-about {
+    box-shadow: 0 4px 4px 0 #00000040;
+    border-radius: 25px;
+    height: 223px;
+    margin-top: 50px;
+    margin-bottom: 38px;
+    background: #7a7878 no-repeat url('../../assets/images/background2.png');
+    background-position: center;
+    opacity: 1;
+  }
+  .dropdown-button-contain {
+    margin: 0 100px;
+    @media (max-width: 790px) {
+      margin: 0;
     }
   }
 }
-
