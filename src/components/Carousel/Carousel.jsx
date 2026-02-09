@@ -8,8 +8,8 @@ export default function Carousel({ pictures }) {
   const iRef = useRef();
 
   useEffect(() => {
-    iRef.current.style =
-      'transform: translateX(calc(-' + img * 100 + '% + -1rem))';
+    const position = (iRef.current.style =
+      'transform: translateX(calc(-' + img * 100 + '% )');
   }, [img]);
 
   if (pictures.length < 2) {
@@ -25,7 +25,7 @@ export default function Carousel({ pictures }) {
   }
   return (
     <div className="carousel">
-      <div ref={iRef} className="img">
+      <div ref={iRef} className="img-container">
         {pictures.map((picture, index) => (
           <img src={picture} key={`${index}`} />
         ))}
