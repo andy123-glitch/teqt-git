@@ -1,0 +1,22 @@
+@use 'sass:math';
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+
+$breakpoints: (
+  mobile: 480px,
+  tablet: 788px,
+  desktop: 1024px,
+);
+
+@function calculate-rem($size) {
+  $t: math.div($size, 16px);
+  @return $t * 1rem;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
