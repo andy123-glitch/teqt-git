@@ -4,11 +4,12 @@
   margin: 2rem 0 1rem;
   border-radius: 25px;
   overflow: hidden;
-  .img {
+
+  .img-container {
     display: flex;
-    gap: 0.5rem;
     transition: transform 1s ease;
     height: clamp(255px, 40vw, 415px);
+
     img {
       aspect-ratio: 3 / 1;
       width: 100%;
