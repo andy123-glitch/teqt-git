@@ -12,7 +12,17 @@ export default function Carousel({ pictures }) {
       'transform: translateX(calc(-' + img * 100 + '% + -1rem))';
   }, [img]);
 
-  console.log(img);
+  if (pictures.length < 2) {
+    return (
+      <div className="carousel">
+        <div ref={iRef} className="img">
+          {pictures.map((picture, index) => (
+            <img src={picture} key={`${index}`} />
+          ))}
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="carousel">
       <div ref={iRef} className="img">
@@ -20,21 +30,23 @@ export default function Carousel({ pictures }) {
           <img src={picture} key={`${index}`} />
         ))}
       </div>
-      <div
-        className="arrows left"
-        onClick={() => setImg(img - 1 < 0 ? pictures.length - 1 : img - 1)}
-      >
-        <img src={arrowRight} alt="" />
-      </div>
-      <div
-        className="arrows right"
-        onClick={() => setImg(img + 1 > pictures.length - 1 ? 0 : img + 1)}
-      >
-        <img src={arrowLeft} alt="" />
-      </div>
-      <span>
-        {img + 1} / {pictures.length}
-      </span>
+      <>
+        <div
+          className="arrows left"
+          onClick={() => setImg(img - 1 < 0 ? pictures.length - 1 : img - 1)}
+        >
+          <img src={arrowRight} alt="" />
+        </div>
+        <div
+          className="arrows right"
+          onClick={() => setImg(img + 1 > pictures.length - 1 ? 0 : img + 1)}
+        >
+          <img src={arrowLeft} alt="" />
+        </div>
+        <span>
+          {img + 1} / {pictures.length}
+        </span>
+      </>
     </div>
   );
 }

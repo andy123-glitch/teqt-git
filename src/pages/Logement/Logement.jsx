@@ -36,22 +36,26 @@ function Logement() {
       <div className="main-content logement-page">
         <Header />
         <Carousel pictures={pictures} />
-        <div className="first-row">
-          <section className="headings">
-            <h1>{title}</h1>
-            <h2>{location}</h2>
-          </section>
-          <Profile name={host.name} picture={host.picture} />
-        </div>
-        <div className="logement">
-          <div className="tags">
+        <div className="grid">
+          <div className="first-col">
+            <div className="headings">
+              <h1>{title}</h1>
+              <h2>{location}</h2>
+            </div>
+            <div className="tags">
             {tags.map((tag, index) => (
               <div className="utag" key={`${index}-${tag}`}>
                 {tag}
               </div>
             ))}
+            </div>
           </div>
-          <Stars number={rating} />
+          <div className="second-col">
+            <Profile name={host.name} picture={host.picture} />
+            <Stars number={rating} />
+          </div>
+        </div>
+        <div className="logement">
           <DropdownButton title="Description">{description}</DropdownButton>
           <DropdownButton title="Équipements">
             {equipments.map((equipment, index) => (

@@ -10,6 +10,7 @@
   margin-top: 50px;
   background: #7a7878 no-repeat url('../../assets/images/background.png');
   background-position: center;
+  background-size: cover;
   transition: all 300ms linear;
 
   display: flex;
@@ -55,6 +56,7 @@
     row-gap: 20px;
     background-color: white;
     padding: 0;
+    grid-auto-rows: 250px;
   }
 }
 

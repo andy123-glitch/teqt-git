@@ -1,9 +1,46 @@
-// Styles pour Carousel
-
+@use '@assets/styles/variable' as *;
 .carousel {
-  // Vos styles ici
-}
-
-.img{
+  position: relative;
+  margin: 2rem 0 1rem;
+  border-radius: 25px;
   overflow: hidden;
+  .img {
+    display: flex;
+    gap: 0.5rem;
+    transition: transform 1s ease;
+    height: clamp(255px, 40vw, 415px);
+    img {
+      aspect-ratio: 3 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .arrows {
+    position: absolute;
+    top: 40%;
+    &.left {
+      left: 1rem;
+    }
+    &.right {
+      right: 1rem;
+    }
+    img {
+      @include respond-to(tablet) {
+        height: 50px;
+      }
+      @include respond-to(mobile) {
+        height: 24px;
+      }
+    }
+  }
+  span {
+    position: absolute;
+    bottom: 25px;
+    color: $color-secondary;
+    width: 100%;
+    text-align: center;
+    @include respond-to(tablet) {
+      display: none;
+    }
+  }
 }

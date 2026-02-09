@@ -1,5 +1,27 @@
+@use '@assets/styles/variable' as *;
 // Styles pour Profile
-
 .profile {
-  // Vos styles ici
+  display: flex;
+  gap: 0.6rem;
+      align-items: center;
+
+  img {
+    width: clamp(32px, 5vw, 64px);
+    height: clamp(32px, 5vw, 64px);
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 1);
+  }
+  h3 {
+    text-align: right;
+    margin: 0;
+    font-weight: 500;
+    width: min-content;
+    font-size: calculate-rem(18px);
+    @include respond-to(tablet) {
+      font-size: calculate-rem(14px);
+    }
+    @include respond-to(mobile) {
+      font-size: calculate-rem(12px);
+    }
+  }
 }
