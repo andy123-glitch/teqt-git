@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:map';
 $color-primary: #ff6060;
 $color-secondary: #ffffff;
 
@@ -14,8 +15,8 @@ $breakpoints: (
 }
 
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    $break: map-get($breakpoints, $breakpoint);
+  @if map.has-key($breakpoints, $breakpoint) {
+    $break: map.get($breakpoints, $breakpoint);
     @media (max-width: $break) {
       @content;
     }
