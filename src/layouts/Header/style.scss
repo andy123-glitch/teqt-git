@@ -1,34 +1,36 @@
 /************************Header ********************************/
+@use '@assets/styles/variable' as *;
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  img {
+    max-width: 210px;
+    min-width: 112px;
+    width: clamp(112px, 20vw, 210px);
+  }
   nav {
     display: flex;
-    gap: 57px;
+    gap: calculate-rem(50px);
+
+    @include respond-to(tablet) {
+      gap: calculate-rem(28px);
+    }
+
     a {
       font-size: 1.5rem;
-    }
-    @media (max-width: 790px) {
-      a {
+
+      @include respond-to(tablet) {
         font-size: 1.1rem;
         text-transform: uppercase;
       }
-      gap: 26px;
-    }
-    @media (max-width: 450px) {
-      a {
+
+      @include respond-to(mobile) {
         font-size: 0.8rem;
       }
-    }
-  }
-  img {
-    @media (max-width: 790px) {
-      height: 58px;
-    }
-    @media (max-width: 450px) {
-      height: 48px;
     }
   }
 }

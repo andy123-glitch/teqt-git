@@ -1,14 +1,12 @@
-/****************************Page Home ******************************/
-$color-primary: #ff6060;
-$color-secondary: #ffffff;
+@use '@assets/styles/variable' as *;
 
-$font-size-h1: clamp(1rem, 1.5rem + 2vw, 3rem);
+/****************************Page Home ******************************/
 
 .banner-home {
   position: relative;
   box-shadow: 0 4px 4px 0 #00000040;
   border-radius: 25px;
-  height: 223px;
+  height: clamp(110px, 15vw, 223px);
   margin-top: 50px;
   background: #7a7878 no-repeat url('../../assets/images/background.png');
   background-position: center;
@@ -18,23 +16,18 @@ $font-size-h1: clamp(1rem, 1.5rem + 2vw, 3rem);
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  @media (max-width: 790px) {
-    height: 170px;
-  }
-  @media (max-width: 450px) {
-    height: 110px;
-  }
+
   span {
     position: absolute;
     color: $color-secondary;
     font-weight: 700;
     font-size: 3rem;
     text-shadow: 0px 4px 4px #00000040;
-    text-align: center;
-    @media (max-width: 790px) {
+    transition: all 300ms linear;
+    @include respond-to(tablet) {
       font-size: 2rem;
     }
-    @media (max-width: 450px) {
+    @include respond-to(mobile) {
       font-size: 1.5rem;
     }
   }
@@ -73,9 +66,5 @@ $font-size-h1: clamp(1rem, 1.5rem + 2vw, 3rem);
   @media (max-width: 1340px) {
     padding: 45px 20px;
     margin-top: 0;
-    width: unset;
   }
-}
-
-.sombre {
 }

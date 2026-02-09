@@ -1,17 +1,29 @@
+@use '@assets/styles/variable' as *;
+
 .about {
   .banner-about {
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 4px 4px 0 #00000040;
     border-radius: 25px;
-    height: 223px;
+    height: clamp(110px, 15vw, 223px);
+
     margin-top: 50px;
     margin-bottom: 38px;
-    background: #7a7878 no-repeat url('../../assets/images/background2.png');
+    background:  no-repeat url('../../assets/images/background2.png') ;
     background-position: center;
-    opacity: 1;
+    background-size: cover;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
   }
   .dropdown-button-contain {
     margin: 0 100px;
-    @media (max-width: 790px) {
+    @include respond-to(desktop) {
       margin: 0;
     }
   }
