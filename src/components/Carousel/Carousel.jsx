@@ -8,8 +8,7 @@ export default function Carousel({ pictures }) {
   const iRef = useRef();
 
   useEffect(() => {
-    const position = (iRef.current.style =
-      'transform: translateX(calc(-' + img * 100 + '% )');
+    iRef.current.style = 'transform: translateX(calc(-' + img * 100 + '% )';
   }, [img]);
 
   if (pictures.length < 2) {
