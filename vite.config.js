@@ -1,10 +1,15 @@
-/* eslint-disable */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Kasa-React/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -13,6 +18,16 @@ export default defineConfig({
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@assets': path.resolve(__dirname, './src/assets'),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @use '@assets/styles/variable' as *;
+
+      `,
+      },
     },
   },
 });
