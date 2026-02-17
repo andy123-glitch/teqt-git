@@ -43,11 +43,11 @@ function Logement() {
               <h2>{location}</h2>
             </div>
             <div className="tags">
-            {tags.map((tag, index) => (
-              <div className="utag" key={`${index}-${tag}`}>
-                {tag}
-              </div>
-            ))}
+              {tags.map((tag, index) => (
+                <div className="utag" key={`${index}-${tag}`}>
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
           <div className="second-col">
@@ -59,7 +59,9 @@ function Logement() {
           <DropdownButton title="Description">{description}</DropdownButton>
           <DropdownButton title="Équipements">
             {equipments.map((equipment, index) => (
-              <div key={`${index}-${equipment}`}>- {equipment}</div>
+              <span key={`${index}-${equipment}`}>
+                - {equipment} <br />
+              </span>
             ))}
           </DropdownButton>
         </div>
