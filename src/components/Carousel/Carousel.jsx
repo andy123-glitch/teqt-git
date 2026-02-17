@@ -14,10 +14,8 @@ export default function Carousel({ pictures }) {
   if (pictures.length < 2) {
     return (
       <div className="carousel">
-        <div ref={iRef} className="img">
-          {pictures.map((picture, index) => (
-            <img src={picture} key={`${index}`} />
-          ))}
+        <div ref={iRef} className="img-container">
+          <img src={pictures[0]} />
         </div>
       </div>
     );

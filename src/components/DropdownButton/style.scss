@@ -1,5 +1,4 @@
 /********************Dropdown Button*********************/
-@use '@assets/styles/variable' as *;
 
 .dropdown-btn {
   margin-bottom: 28px;
@@ -33,6 +32,12 @@
     color: $color-secondary;
     img {
       transition: rotate ease-in 0.25s;
+      @include respond-to(tablet) {
+        width: 20px;
+      }
+      @include respond-to(mobile) {
+      }
+      width: 16px;
     }
   }
   .children {
