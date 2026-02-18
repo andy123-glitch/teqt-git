@@ -3,14 +3,39 @@
   text-align: center;
   width: 100%;
   font-weight: 700;
-  font-size: 12rem;
+  font-size: calculate-rem(288px);
+  @include respond-to(tablet) {
+    font-size: calculate-rem(180px);
+  }
+
+  @include respond-to(mobile) {
+    font-size: calculate-rem(96px);
+  }
 }
-.NotFound {
+.NotFound-content {
+  @include main-content;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   p {
-    font-size: 2.5rem;
+    font-size: calculate-rem(36px);
+    @include respond-to(tablet) {
+      font-size: calculate-rem(22px);
+    }
+    @include respond-to(mobile) {
+      font-size: calculate-rem(18px);
+    }
   }
   .return {
     text-decoration: underline;
+    font-size: calculate-rem(18px);
+    @include respond-to(tablet) {
+      font-size: calculate-rem(16px);
+    }
+    @include respond-to(mobile) {
+      font-size: calculate-rem(14px);
+    }
   }
 }

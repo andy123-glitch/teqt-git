@@ -7,11 +7,10 @@ import DropdownButton from '@components/DropdownButton';
 function About() {
   return (
     <>
-      <div className="main-content about">
-        <Header />
-        <section className="banner-about">
-        </section>
-        <section className="dropdown-button-contain">
+      <Header />
+      <div className="about-content ">
+        <section className="banner-about"></section>
+        <section className="dropdown-button-container">
           <DropdownButton title="Fiabilité">
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont

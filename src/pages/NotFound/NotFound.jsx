@@ -6,8 +6,8 @@ import './style.scss';
 function NotFound() {
   return (
     <>
-      <div className="main-content NotFound">
-        <Header />
+      <Header />
+      <div className="NotFound-content">
         <div className="number-NotFound">404</div>
         <p>Oups! La page que vous demandez n'existe pas.</p>
         <NavLink to="/" className="return">

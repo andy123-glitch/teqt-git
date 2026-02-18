@@ -1,15 +1,17 @@
 /************************Header ********************************/
-@use '@assets/styles/variable' as *;
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @include main-content;
+  margin: 50px auto;
 
+  @include respond-to(desktop) {
+    margin: 20px auto;
+  }
   img {
-    max-width: 210px;
-    min-width: 112px;
     width: clamp(112px, 20vw, 210px);
   }
   nav {

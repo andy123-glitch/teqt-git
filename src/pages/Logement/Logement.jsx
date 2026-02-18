@@ -33,10 +33,10 @@ function Logement() {
   } = find;
   return (
     <>
-      <div className="main-content logement-page">
-        <Header />
+      <Header />
+      <div className="logement-content">
         <Carousel pictures={pictures} />
-        <div className="grid">
+        <div className="informations">
           <div className="first-col">
             <div className="headings">
               <h1>{title}</h1>
@@ -55,7 +55,7 @@ function Logement() {
             <Stars number={rating} />
           </div>
         </div>
-        <div className="logement">
+        <div className="descriptions">
           <DropdownButton title="Description">{description}</DropdownButton>
           <DropdownButton title="Équipements">
             {equipments.map((equipment, index) => (

@@ -8,25 +8,18 @@ import './style.scss';
 function Home() {
   return (
     <>
-      <div className="main-content">
-        <Header />
-        <main>
-          <section className="banner-home">
-            <span>Chez vous, partout et ailleurs</span>
-            <div className="sombre"></div>
-          </section>
-          <section className="container">
-            {datas.map(({ id, cover, title }) => (
-              <Card
-                to={id}
-                cover={cover}
-                title={title}
-                key={`${id}-${title}`}
-              />
-            ))}
-          </section>
-        </main>
-      </div>
+      <Header />
+      <main className="home-content">
+        <section className="banner-home">
+          <span>Chez vous, partout et ailleurs</span>
+          <div className="sombre"></div>
+        </section>
+        <section className="container">
+          {datas.map(({ id, cover, title }) => (
+            <Card to={id} cover={cover} title={title} key={`${id}-${title}`} />
+          ))}
+        </section>
+      </main>
       <Footer />
     </>
   );
