@@ -1,8 +1,12 @@
 .carousel {
   position: relative;
-  margin: 2rem 0 1rem;
   border-radius: 25px;
   overflow: hidden;
+  margin-bottom: calculate-rem(25px);
+
+  @include respond-to(tablet) {
+    margin-bottom: calculate-rem(15px);
+  }
 
   .img-container {
     display: flex;
