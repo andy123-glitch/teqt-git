@@ -1,6 +1,4 @@
 /**************************Footer*******************************/
-$color-primary: #ff6060;
-$color-secondary: #ffffff;
 footer {
   display: flex;
   flex-direction: column;
@@ -9,11 +7,25 @@ footer {
   color: $color-secondary;
   background-color: black;
   padding: 30px;
+  margin-top: 45px;
+  @include respond-to(tablet) {
+    margin-top: calculate-rem(35px);
+  }
+  @include respond-to(mobile) {
+    margin-top: calculate-rem(27px);
+  }
   img {
     margin-top: 20px;
     width: 122px;
   }
   div {
-    font-size: 1.4rem;
+    font-size: calculate-rem(24px);
+    @include respond-to(tablet) {
+      font-size: calculate-rem(18px);
+    }
+
+    @include respond-to(mobile) {
+      font-size: calculate-rem(12px);
+    }
   }
 }
