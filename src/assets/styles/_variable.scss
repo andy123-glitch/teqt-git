@@ -1,6 +1,7 @@
 @use 'sass:math';
 @use 'sass:map';
 $color-primary: #ff6060;
+$font: 'Montserrat', Arial;
 $color-secondary: #ffffff;
 
 $breakpoints: (
@@ -21,4 +22,12 @@ $breakpoints: (
       @content;
     }
   }
+}
+
+@mixin main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 20px;
 }
