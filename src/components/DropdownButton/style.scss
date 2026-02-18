@@ -1,7 +1,6 @@
 /********************Dropdown Button*********************/
 
 .dropdown-btn {
-  margin-bottom: 28px;
   font-weight: 700;
 
   .header {
@@ -10,7 +9,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
+    height: 30px;
+    @include respond-to(tablet) {
+      height: 20px;
+    }
+
+    @include respond-to(mobile) {
+      height: 10px;
+    }
   }
 
   h3 {
@@ -53,14 +61,11 @@
 
     background: rgba(246, 246, 246, 0.45);
     margin: 0;
-    transform: translateY(-100%);
     opacity: 0;
     height: 0;
     transition: all ease 0.2s;
-    z-index: -1;
     &.active {
       height: auto;
-      transform: translateY(0);
       opacity: 1;
       padding: 17px;
     }

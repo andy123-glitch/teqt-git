@@ -1,9 +1,8 @@
-@use '@assets/styles/variable' as *;
 // Styles pour Profile
 .profile {
   display: flex;
   gap: 0.6rem;
-      align-items: center;
+  align-items: center;
 
   img {
     width: clamp(32px, 5vw, 64px);
