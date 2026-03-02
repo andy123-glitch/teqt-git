@@ -11,6 +11,10 @@ header {
   @include respond-to(desktop) {
     margin: 20px auto;
   }
+
+  .active{
+    text-decoration: underline;
+  }
   img {
     width: clamp(112px, 20vw, 210px);
   }

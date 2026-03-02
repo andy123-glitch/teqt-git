@@ -67,6 +67,7 @@
     background-color: $color-primary;
     color: $color-secondary;
     border-radius: 10px;
+    padding: 0 10px;
 
     font-size: calculate-rem(14px);
     @include respond-to(tablet) {
