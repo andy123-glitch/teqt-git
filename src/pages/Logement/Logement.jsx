@@ -34,7 +34,7 @@ function Logement() {
   return (
     <>
       <Header />
-      <div className="logement-content">
+      <main className="logement-content" role="main">
         <Carousel pictures={pictures} />
         <div className="informations">
           <div className="first-col">
@@ -65,7 +65,7 @@ function Logement() {
             ))}
           </DropdownButton>
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );

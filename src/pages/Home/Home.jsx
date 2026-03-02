@@ -9,8 +9,8 @@ function Home() {
   return (
     <>
       <Header />
-      <main className="home-content">
-        <section className="banner-home">
+      <main className="home-content" role="main">
+        <section className="banner-home" fetchPriority="high">
           <span>Chez vous, partout et ailleurs</span>
           <div className="sombre"></div>
         </section>

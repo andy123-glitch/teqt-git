@@ -7,13 +7,13 @@ function NotFound() {
   return (
     <>
       <Header />
-      <div className="NotFound-content">
+      <main className="NotFound-content" role="main">
         <div className="number-NotFound">404</div>
         <p>Oups! La page que vous demandez n'existe pas.</p>
         <NavLink to="/" className="return">
           Retourner sur la page d’accueil
         </NavLink>
-      </div>
+      </main>
       <Footer />
     </>
   );

@@ -8,7 +8,7 @@ function About() {
   return (
     <>
       <Header />
-      <div className="about-content ">
+      <main className="about-content " role="main">
         <section className="banner-about"></section>
         <section className="dropdown-button-container">
           <DropdownButton title="Fiabilité">
@@ -36,7 +36,7 @@ function About() {
             ateliers sur la sécurité doméstique pour nos hôtes.
           </DropdownButton>
         </section>
-      </div>
+      </main>
       <Footer />
     </>
   );
