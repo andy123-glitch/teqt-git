@@ -14,8 +14,17 @@ export default function DropdownButton({ title, children }) {
     <div className="dropdown-btn">
       <div className="header">
         <h3>{title}</h3>
-        <button type="button" onClick={handleClick}>
-          <img src={arrow} alt="" />
+        <button
+          type="button"
+          onClick={handleClick}
+          aria-label="Afficher/Effacer la description"
+        >
+          <img
+            src={arrow}
+            alt="Afficher/Effacer la description"
+            width="24px"
+            height="14px"
+          />
         </button>
       </div>
       <div className="children" ref={pRef}>

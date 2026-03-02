@@ -15,7 +15,12 @@ export default function Carousel({ pictures }) {
     return (
       <div className="carousel">
         <div ref={iRef} className="img-container">
-          <img src={pictures[0]} />
+          <img
+            src={pictures[0]}
+            width="1240px"
+            height="415px"
+            alt="Imagedu logement"
+          />
         </div>
       </div>
     );
@@ -24,26 +29,31 @@ export default function Carousel({ pictures }) {
     <div className="carousel">
       <div ref={iRef} className="img-container">
         {pictures.map((picture, index) => (
-          <img src={picture} key={`${index}`} />
+          <img
+            src={picture}
+            key={`${index}`}
+            fetchPriority={index === 1 ? 'high' : 'low'}
+            alt={`Image n ${index} du logement`}
+            width="1240px"
+            height="415px"
+          />
         ))}
       </div>
-      <>
-        <div
-          className="arrows left"
-          onClick={() => setImg(img - 1 < 0 ? pictures.length - 1 : img - 1)}
-        >
-          <img src={arrowRight} alt="" />
-        </div>
-        <div
-          className="arrows right"
-          onClick={() => setImg(img + 1 > pictures.length - 1 ? 0 : img + 1)}
-        >
-          <img src={arrowLeft} alt="" />
-        </div>
-        <span>
-          {img + 1} / {pictures.length}
-        </span>
-      </>
+      <div
+        className="arrows left"
+        onClick={() => setImg(img - 1 < 0 ? pictures.length - 1 : img - 1)}
+      >
+        <img src={arrowRight} alt="Fleche gauche" width="47px" height="79px" />
+      </div>
+      <div
+        className="arrows right"
+        onClick={() => setImg(img + 1 > pictures.length - 1 ? 0 : img + 1)}
+      >
+        <img src={arrowLeft} alt="Fleche droite" height="79px" width="47px" />
+      </div>
+      <span>
+        {img + 1} / {pictures.length}
+      </span>
     </div>
   );
 }

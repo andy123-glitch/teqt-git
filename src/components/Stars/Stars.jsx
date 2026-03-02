@@ -14,7 +14,13 @@ export default function Stars({ number }) {
   return (
     <div className="stars">
       {stars.map((s, index) => (
-        <img src={s} alt="" key={`${s}-${index}`} />
+        <img
+          src={s}
+          alt="Icon d'étoiles activée/désactivé"
+          key={`${s}-${index}`}
+          width="25px"
+          height="24px"
+        />
       ))}
     </div>
   );
