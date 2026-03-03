@@ -12,6 +12,7 @@ import './style.scss';
 function Logement() {
   const { id } = useParams();
   const nav = useNavigate();
+  // redirige l'utilisateur vers la page 404 s'il n'y as pas de logements trouvés
   const find = datas.find((data) => data.id === id) ?? null;
   useEffect(() => {
     if (find === null) {
@@ -31,6 +32,7 @@ function Logement() {
     tags,
     pictures,
   } = find;
+  
   return (
     <>
       <Header />

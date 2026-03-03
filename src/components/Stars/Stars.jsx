@@ -4,6 +4,7 @@ import './style.scss';
 
 export default function Stars({ number }) {
   let stars = [];
+  //permet de savoir combien d'etoile a affiché
   for (let index = number; index > 0; index--) {
     stars.push(starActive);
   }

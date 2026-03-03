@@ -11,6 +11,7 @@ export default function Carousel({ pictures }) {
     iRef.current.style = 'transform: translateX(calc(-' + img * 100 + '% )';
   }, [img]);
 
+  // S'il n'y a qu'une image, ne créer pas les flèches
   if (pictures.length < 2) {
     return (
       <div className="carousel">
