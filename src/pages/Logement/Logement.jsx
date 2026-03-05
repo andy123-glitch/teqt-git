@@ -12,15 +12,16 @@ import './style.scss';
 function Logement() {
   const { id } = useParams();
   const nav = useNavigate();
-  const find = datas.find((data) => data.id === id) ?? null;
+  const find = datas.find((data) => data.id === id);
   useEffect(() => {
-    if (find === null) {
-      nav('/404');
-      return null;
+    if (find === undefined) {
+      nav('/404', { replace: true });
     }
   }, [nav, find]);
 
-  if (find === null) return null;
+  if (find === undefined) {
+    return null;
+  }
   const {
     title,
     host,
