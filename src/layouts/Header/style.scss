@@ -12,7 +12,8 @@ header {
     margin: 20px auto;
   }
 
-  .active{
+  /*Lorsqu'on clique sur un lien, cela affectue automatiquement la class active*/
+  .active {
     text-decoration: underline;
   }
   img {

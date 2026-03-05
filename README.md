@@ -75,4 +75,4 @@ _Note pour le déploiement : L'application utilisant React Router côté client,
 **Andy Azerot**
 
 - GitHub : [@andy123-glitch](https://github.com/andy123-glitch)
-- Portfolio / Démo : [test.andy-azerot.fr](https://test.andy-azerot.fr/)
+- Portfolio / Démo : [kasa.andy-azerot.fr](https://kasa.andy-azerot.fr)

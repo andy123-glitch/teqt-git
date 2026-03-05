@@ -1,8 +1,6 @@
-$color-primary: #ff6060;
-$color-secondary: #ffffff;
 
 article {
-  background-color: #ff6060;
+  background-color: $color-primary;
   position: relative;
   border-radius: 10px;
 

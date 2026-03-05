@@ -32,6 +32,7 @@ function Logement() {
     tags,
     pictures,
   } = find;
+
   return (
     <>
       <Header />

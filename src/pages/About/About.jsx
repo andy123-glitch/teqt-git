@@ -3,13 +3,15 @@ import Header from '@layouts/Header';
 import './style.scss';
 
 import DropdownButton from '@components/DropdownButton';
+import Banner from '@components/Banner';
 
+import img from '@assets/images/background2.png';
 function About() {
   return (
     <>
       <Header />
       <main className="about-content " role="main">
-        <section className="banner-about"></section>
+        <Banner imgSrc={img} opacity={0.3} />
         <section className="dropdown-button-container">
           <DropdownButton title="Fiabilité">
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
