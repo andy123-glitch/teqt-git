@@ -15,9 +15,9 @@ $breakpoints: (
   @return $t * 1rem;
 }
 
-@mixin respond-to($breakpoint) {
-  @if map.has-key($breakpoints, $breakpoint) {
-    $break: map.get($breakpoints, $breakpoint);
+@mixin respond-to($name) {
+  @if map.has-key($breakpoints, $name) {
+    $break: map.get($breakpoints, $name);
     @media (max-width: $break) {
       @content;
     }
