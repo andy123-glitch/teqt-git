@@ -16,7 +16,7 @@ function Home() {
       <main className="home-content" role="main">
         <Banner
           imgSrc={img}
-          text="Chez vous, partout et ailleurss"
+          text="Chez vous, partout et ailleurs"
           opacity="0.7"
         />
         <section className="container">

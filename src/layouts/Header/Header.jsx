@@ -15,7 +15,7 @@ export default function Header() {
       </a>
       <nav role="navigation">
         <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">A propos</NavLink>
+        <NavLink to="/about">A Propos</NavLink>
       </nav>
     </header>
   );
