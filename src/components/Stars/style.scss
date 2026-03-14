@@ -3,12 +3,17 @@
   justify-self: end;
   img {
     height: 24px;
-    padding: 0 0.2rem;
+    width: 24px;
+    padding: 0 calculate-rem(8px);
     @include respond-to(tablet) {
+      width: 17px;
       height: 17px;
+      padding: 0 calculate-rem(5px);
     }
     @include respond-to(mobile) {
+      width: 13px;
       height: 13px;
+      padding: 0 calculate-rem(3px);
     }
   }
 }

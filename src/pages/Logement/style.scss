@@ -58,6 +58,7 @@
   flex-direction: row;
   gap: 10px;
   height: clamp(18px, 2vw, 25px);
+  flex-wrap: wrap;
   .utag {
     font-weight: 600;
     min-width: 115px;

@@ -1,13 +1,12 @@
 /****************************Page Home ******************************/
 
-
-
 .container {
   background-color: #f6f6f6;
   border-radius: 25px;
   padding: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), auto));
+
   grid-auto-rows: 340px;
 
   grid-gap: 50px 60px;
@@ -32,4 +31,8 @@
   @include respond-to(mobile) {
     gap: calculate-rem(22px);
   }
+}
+
+* {
+  outline: 1px solid red !important;
 }

@@ -1,4 +1,4 @@
-@use 'variable';
+@use '_variable';
 
 #root {
   min-height: 100vh;
@@ -15,4 +15,9 @@ body {
 a {
   color: black;
   text-decoration: none;
+}
+@include respond-to(mobile) {
+  #root {
+    grid-template-rows: auto auto 1fr;
+  }
 }

@@ -18,6 +18,7 @@ header {
   }
   img {
     width: clamp(112px, 20vw, 210px);
+    height: auto;
   }
   nav {
     display: flex;

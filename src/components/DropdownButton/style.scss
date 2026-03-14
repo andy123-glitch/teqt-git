@@ -44,8 +44,8 @@
         width: 20px;
       }
       @include respond-to(mobile) {
+        width: 16px;
       }
-      width: 16px;
     }
   }
   .children {
@@ -63,11 +63,19 @@
     margin: 0;
     opacity: 0;
     height: 0;
+    transform: scale(0);
     transition: all ease 0.2s;
     &.active {
+      transform: scale(1);
       height: auto;
       opacity: 1;
-      padding: 17px;
+      padding: calculate-rem(20px);
+      @include respond-to(tablet) {
+        padding: calculate-rem(17px);
+      }
+      @include respond-to(mobile) {
+        padding: calculate-rem(15px);
+      }
     }
   }
 }
